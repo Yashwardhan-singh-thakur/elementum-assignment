@@ -1,18 +1,30 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
+import Header from "./components/Header";
+import HeroSection from "./sections/HeroSection";
+import TomorrowSection from "./sections/TomorrowSection";
+import ProgressSection from "./sections/ProgressSection";
+import ServicesSection from "./sections/ServicesSection";
+import TestimonialsSection from "./sections/TestimonialsSection";
+import NewsletterSection from "./sections/NewsletterSection";
+import Footer from "./sections/Footer";
+
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div style={{ padding: "50px" }}>
-      <h1 style={{ fontSize: "80px", fontWeight: 400 }}>
-        The thinkers and doers
-      </h1>
-    </div>
+    <>
+      <Header />
+
+      <main>
+        <HeroSection />
+        <TomorrowSection />
+        <ProgressSection />
+        <ServicesSection />
+        <TestimonialsSection />
+        <NewsletterSection />
+      </main>
+
+      <Footer />
+    </>
   );
 }
 

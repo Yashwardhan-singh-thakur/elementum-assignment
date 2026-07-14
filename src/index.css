@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @font-face {
   font-family: "Gerbil";
   src: url("./assets/fonts/Gerbil.otf") format("opentype");
@@ -8,9 +10,36 @@
 
 :root {
   font-family: "Gerbil", Arial, sans-serif;
+  color: #111111;
+  background-color: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  min-width: 320px;
   margin: 0;
+  overflow-x: hidden;
   font-family: "Gerbil", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
