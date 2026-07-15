@@ -1,4 +1,6 @@
-import HighlightText, { UnderlinedText } from "../components/HighlightText";
+import HighlightText from "../components/HighlightText";
+import UnderlinedText from "../components/UnderlinedText";
+import TeamMember from "../components/TeamMember";
 
 const memberPositionClasses = {
   1: "top-[164px] left-[1.9%] size-[148px]",
@@ -17,37 +19,23 @@ const teamMembers = Array.from({ length: 8 }, (_, index) => ({
   alt: "Elementum team member",
 }));
 
-function TeamMember({ member }) {
-  return (
-    <figure
-      className={`absolute m-0 overflow-hidden rounded-full bg-[#ededed] max-[900px]:static max-[900px]:size-auto max-[900px]:aspect-square ${memberPositionClasses[member.id]}`}
-    >
-      <img
-        className="size-full object-cover"
-        src={member.image}
-        alt={member.alt}
-      />
-    </figure>
-  );
-}
-
 export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative h-[958px] overflow-hidden bg-white max-[900px]:h-auto max-[900px]:min-h-[930px] max-[900px]:pb-20 max-[600px]:min-h-0"
+      className="relative  h-[922px] overflow-hidden bg-white max-[900px]:h-auto max-[900px]:min-h-[930px] max-[900px]:pb-20 max-[600px]:min-h-0"
     >
       <div
         className="pointer-events-none absolute top-[366px] -left-2.5 z-[2] h-[290px] w-[126px] max-[900px]:hidden"
         aria-hidden="true"
       >
         <img
-          className="absolute top-0 left-0 h-full w-auto object-contain"
+          className="absolute top-0 left-2 h-[250px] w-auto object-contain"
           src="/lines/left-curly-pink-line.png"
           alt=""
         />
         <img
-          className="absolute top-2 left-7 h-full w-auto object-contain"
+          className="absolute top-0 left-10 h-[250px] w-auto object-contain"
           src="/lines/left-curly-black-line.png"
           alt=""
         />
@@ -60,16 +48,33 @@ export default function HeroSection() {
         aria-hidden="true"
       />
 
-      <div className="relative z-[3] mx-auto w-[min(calc(100%_-_64px),1120px)] pt-[119px] text-center max-[900px]:w-[min(calc(100%_-_40px),760px)] max-[900px]:pt-[70px] max-[600px]:pt-12">
-        <h1 className="m-0 font-gerbil text-[70px] leading-[1.08] font-normal tracking-[-0.042em] max-[1200px]:text-[clamp(72px,7.1vw,86px)] max-[900px]:text-[clamp(46px,9vw,72px)] max-[600px]:text-[clamp(38px,11vw,52px)] max-[600px]:leading-[0.96] tracking-wide">
-          The <UnderlinedText>thinkers</UnderlinedText> and
+      <div className="relative z-[3] mx-auto w-[min(calc(100%_-_64px),1120px)] pt-[119px]  text-center max-[900px]:w-[min(calc(100%_-_40px),760px)] max-[900px]:pt-[70px] max-[600px]:pt-12">
+        <h1 className="m-0 font-gerbil text-[70px] leading-[90px]  font-normal  max-[1200px]:text-[clamp(58px,5.8vw,70px)] max-[900px]:text-[clamp(46px,7vw,58px)] max-[600px]:text-[clamp(38px,10vw,48px)]    tracking-wide ">
+          The{" "}
+          <UnderlinedText className="after:w-[440px]  after:-translate-x-1/2 after:left-1/2 after:-bottom-[0.14em] after:h-[0.59em]">
+            thinkers
+          </UnderlinedText>{" "}
+          and
           <br />
-          doers were <HighlightText color="pink">changing</HighlightText>
+          doers were{" "}
+          <HighlightText
+            color="pink"
+            className="before:-left-[-1.75em] before:h-[1.3em]  before:bottom-[0.05em]"
+          >
+            changing
+          </HighlightText>
           <br />
-          the <HighlightText>status</HighlightText> Quo with
+          the{" "}
+          <HighlightText
+            color="mint"
+            className="before:-left-[0.25em] before:h-[1.1em] before:bottom-[0.15em] "
+          >
+            status
+          </HighlightText>{" "}
+          Quo with
         </h1>
 
-        <p className="mt-9 text-[15px] leading-[1.55] tracking-[-0.01em] max-[900px]:mx-auto max-[900px]:max-w-[570px] max-[600px]:mt-7 max-[600px]:text-xs">
+        <p className="mt-5 text-[17px] leading-[1.55] tracking-[-0.01em] max-[900px]:mx-auto max-[900px]:max-w-[570px] max-[600px]:mt-7 max-[600px]:text-xs">
           We are a team of strategists, designers communicators, researchers.
           Together,
           <br className="max-[600px]:hidden" /> we believe that progress only
@@ -82,7 +87,11 @@ export default function HeroSection() {
         aria-label="Meet the Elementum team"
       >
         {teamMembers.map((member) => (
-          <TeamMember key={member.id} member={member} />
+          <TeamMember
+            key={member.id}
+            member={member}
+            memberPositionClasses={memberPositionClasses}
+          />
         ))}
       </div>
     </section>

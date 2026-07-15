@@ -24,10 +24,10 @@ function Header() {
   }, []);
 
   return (
-    <header className="relative z-[100] h-[72px] bg-white">
+    <header className="fixed top-0 w-[100%] z-[100] h-[72px] bg-white  ">
       <div className="mx-auto flex h-[72px] w-[min(calc(100%_-_64px),1200px)] items-center justify-between max-[900px]:w-[min(calc(100%_-_40px),700px)]">
         <a
-          className="font-gerbil text-[23px] leading-none tracking-[-0.035em] max-[600px]:text-xl tracking-wide"
+          className="font-gerbil text-[20px] leading-none tracking-[-0.035em] max-[600px]:text-xl tracking-wide"
           href="#home"
           onClick={() => setIsMenuOpen(false)}
         >

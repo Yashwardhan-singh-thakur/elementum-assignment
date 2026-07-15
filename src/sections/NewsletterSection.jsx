@@ -29,30 +29,30 @@ function NewsletterSection() {
         aria-hidden="true"
       >
         <img
-          className="absolute left-[calc(50%_-_235px)] w-[156px]"
+          className="absolute left-[calc(50%_-_225px)] w-[156px]"
           src="/lines/pink-arrow-line.png"
           alt=""
         />
         <img
-          className="absolute left-[calc(50%_-_160px)] w-[156px]"
+          className="absolute left-[calc(50%_-_150px)] w-[156px]"
           src="/lines/pink-arrow-line.png"
           alt=""
         />
       </div>
       <img
-        className="absolute top-[180px] right-[6.5%] w-[124px] max-[900px]:-right-[30px] max-[900px]:w-[100px]"
+        className="absolute top-[180px] right-[6.5%] w-[124px] max-[900px]:-right-[30px] max-[900px]:w-[100px]  rotate-180 "
         src="/styled-container/purple-half-circle.png"
         alt=""
         aria-hidden="true"
       />
 
-      <div className="relative z-[2] pt-[121px] text-center max-[900px]:px-5 max-[900px]:pt-[110px] max-[900px]:pb-20 max-[600px]:pt-[105px]">
-        <h2 className="font-gerbil text-[82px] leading-[0.86] font-normal tracking-[-0.045em] max-[900px]:text-[clamp(60px,11vw,86px)] tracking-wide">
+      <div className="relative z-[2] pt-[110px] text-center max-[900px]:px-5 max-[900px]:pt-[110px] max-[900px]:pb-20 max-[600px]:pt-[105px]">
+        <h2 className="font-gerbil text-[70px] leading-[90px] font-normal tracking-[-0.045em] max-[900px]:text-[clamp(60px,11vw,86px)] tracking-wide ">
           Subscribe to
           <br />
           our newsletter
         </h2>
-        <p className="mt-[23px] text-[13px] max-[600px]:text-[11px]">
+        <p className="mt-[5px] text-[16px] max-[600px]:text-[11px]">
           To make your stay special and even more memorable
         </p>
 
@@ -79,7 +79,7 @@ function NewsletterSection() {
             }`}
           />
           <button
-            className="h-[52px] w-[175px] cursor-pointer rounded-full bg-black text-[13px] text-white transition-[transform,background] duration-[180ms] hover:-translate-y-0.5 hover:bg-[#282828] focus-visible:-translate-y-0.5 focus-visible:bg-[#282828]"
+            className="h-[52px] w-[175px] cursor-pointer rounded-full font-medium bg-black text-[15px] text-white transition-[transform,background] duration-[180ms] hover:-translate-y-0.5 hover:bg-[#282828] focus-visible:-translate-y-0.5 focus-visible:bg-[#282828]"
             type="submit"
           >
             Subscribe Now

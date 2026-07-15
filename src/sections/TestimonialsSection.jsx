@@ -1,14 +1,15 @@
-import HighlightText, { UnderlinedText } from "../components/HighlightText";
+import HighlightText from "../components/HighlightText";
+import UnderlinedText from "../components/UnderlinedText";
 
 const customerPositionClasses = {
-  1: "top-[162px] left-0 size-[82px]",
-  2: "top-[306px] -left-[68px] size-12",
-  3: "top-[305px] left-[35px] size-40",
-  4: "top-[498px] -left-[59px] size-[66px]",
-  5: "top-40 right-0 size-[106px]",
-  6: "top-[272px] right-[146px] size-[58px]",
-  7: "top-[362px] right-[106px] size-20",
-  8: "top-[368px] -right-[90px] size-[220px]",
+  1: "top-[110px] left-0 size-[86px]",
+  2: "top-[260px] -left-[68px] size-14",
+  3: "top-[290px] left-[30px] size-38",
+  4: "top-[438px] -left-[82px] size-[86px]",
+  5: "top-27 right-[-15px] size-[106px]",
+  6: "top-[170px] right-[136px] size-[64px]",
+  7: "top-[275px] right-[96px] size-20",
+  8: "top-[360px] -right-[90px] size-[210px]",
 };
 
 const customers = Array.from({ length: 8 }, (_, index) => ({
@@ -21,23 +22,32 @@ function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="relative h-[739px] overflow-hidden bg-white max-[900px]:h-auto max-[900px]:py-[100px] max-[900px]:pb-[110px] max-[600px]:py-20"
+      className="relative h-[726px] px-20 overflow-hidden bg-white max-[900px]:h-auto max-[900px]:py-[100px] max-[900px]:pb-[110px] max-[600px]:py-20"
     >
       <div className="relative mx-auto h-full w-[min(calc(100%_-_64px),1200px)] max-[900px]:flex max-[900px]:h-auto max-[900px]:w-[min(calc(100%_-_40px),700px)] max-[900px]:flex-col max-[900px]:items-center">
-        <h2 className="absolute top-[106px] left-1/2 z-[3] m-0 w-[690px] -translate-x-1/2 text-center font-gerbil text-5xl leading-[0.92] font-normal tracking-[-0.04em] max-[900px]:static max-[900px]:w-full max-[900px]:translate-x-0 max-[900px]:text-[clamp(40px,7vw,54px)] tracking-wide">
-          <HighlightText>What</HighlightText> our customer
+        <h2 className="absolute top-[106px] left-1/2 z-[3] m-0 w-[690px] -translate-x-1/2 text-center font-gerbil text-[40px] leading-[50px] font-normal tracking-[-0.04em] max-[900px]:static max-[900px]:w-full max-[900px]:translate-x-0 max-[900px]:text-[clamp(40px,7vw,54px)] tracking-wide ">
+          <HighlightText
+            color="mint"
+            className="before:-left-[0.35em] before:h-[1.30em] before:bottom-[0.05em] "
+          >
+            What
+          </HighlightText>{" "}
+          our customer
           <br />
-          says <UnderlinedText>About Us</UnderlinedText>
+          says{" "}
+          <UnderlinedText className="after:w-[290px]  after:-translate-x-1/2 after:left-1/2 after:-bottom-[0.18em] after:h-[0.59em]">
+            About Us
+          </UnderlinedText>
         </h2>
 
-        <article className="absolute top-[245px] left-1/2 z-[2] flex min-h-[220px] w-[660px] -translate-x-1/2 items-center rounded-[42px] bg-quote px-[70px] py-[42px] text-center max-[900px]:static max-[900px]:mt-[55px] max-[900px]:w-[min(100%,660px)] max-[900px]:translate-x-0 max-[600px]:min-h-0 max-[600px]:rounded-[30px] max-[600px]:px-[30px] max-[600px]:py-12">
+        <article className=" absolute top-[245px] left-1/2 z-[2] flex min-h-[220px] w-[630px] -translate-x-1/2 items-center rounded-[42px] bg-quote px-[70px] py-[42px] text-center max-[900px]:static max-[900px]:mt-[55px] max-[900px]:w-[min(100%,660px)] max-[900px]:translate-x-0 max-[600px]:min-h-0 max-[600px]:rounded-[30px] max-[600px]:px-[30px] max-[600px]:py-12">
           <span
-            className="absolute top-[23px] left-[31px] font-serif text-[76px] leading-none font-bold text-[#c6d1c9]"
+            className="absolute top-[15px] left-[45px] font-serif text-[116px] leading-none font-extrabold text-[#c6d1c9]"
             aria-hidden="true"
           >
             “
           </span>
-          <p className="relative z-[2] text-xl leading-[1.46] max-[600px]:text-sm">
+          <p className="relative z-[2] text-xl leading-[1.46] max-[600px]:text-sm indent-8">
             Elementum delivered the site within the timeline as they requested.
             In the end, the client found a 50% increase in traffic with in days
             since its launch. They also had an impressive ability to use
@@ -45,7 +55,7 @@ function TestimonialsSection() {
             proved to be easy to use and reliable.
           </p>
           <span
-            className="absolute right-[34px] bottom-[5px] font-serif text-[76px] leading-none font-bold text-[#c6d1c9]"
+            className="absolute right-[125px] bottom-[-38px] font-serif text-[116px] leading-none font-extrabold text-[#c6d1c9]"
             aria-hidden="true"
           >
             ”

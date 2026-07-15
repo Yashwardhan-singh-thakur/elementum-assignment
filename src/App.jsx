@@ -1,7 +1,6 @@
 import Header from "./components/Header";
 import HeroSection from "./sections/HeroSection";
-import TomorrowSection from "./sections/TomorrowSection";
-import ProgressSection from "./sections/ProgressSection";
+import PinkLine from "./components/PinkLine";
 import ServicesSection from "./sections/ServicesSection";
 import TestimonialsSection from "./sections/TestimonialsSection";
 import NewsletterSection from "./sections/NewsletterSection";
@@ -12,10 +11,9 @@ function App() {
     <>
       <Header />
 
-      <main>
+      <main className="pt-[56px]">
         <HeroSection />
-        <TomorrowSection />
-        <ProgressSection />
+        <PinkLine />
         <ServicesSection />
         <TestimonialsSection />
         <NewsletterSection />
