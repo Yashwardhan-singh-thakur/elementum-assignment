@@ -1,79 +1,90 @@
-function NewsletterSection() {
-  const handleSubscribe = () => {
-    const newsletterSection = document.querySelector("#newsletter-email");
+import { useEffect, useRef, useState } from "react";
 
-    if (newsletterSection) {
-      newsletterSection.focus();
+function NewsletterSection() {
+  const [isOpen, setIsOpen] = useState(false);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (isOpen) inputRef.current?.focus();
+  }, [isOpen]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (!isOpen) {
+      setIsOpen(true);
+      return;
     }
+
+    event.currentTarget.reset();
   };
 
   return (
     <section
       id="newsletter"
-      className="relative overflow-hidden bg-[#d8f5e2] px-5 pb-20 pt-24 sm:px-8 sm:pb-24 sm:pt-28 md:px-12 md:pb-28 md:pt-32 lg:px-16 lg:pb-32 lg:pt-36"
+      className="relative h-[468px] overflow-hidden bg-mint max-[900px]:h-auto max-[900px]:min-h-[460px]"
     >
-      {/* Pink arrow lines above heading */}
-      <img
-        src="/lines/pink-arrow-line.png"
-        alt=""
+      <div
+        className="pointer-events-none absolute -top-2 right-0 left-0 z-[1] h-[120px] max-[600px]:left-[44%] max-[600px]:w-[130px]"
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-[28px] w-[95px] -translate-x-[115%] object-contain sm:top-[34px] sm:w-[115px] md:top-[38px] md:w-[135px] lg:top-[40px] lg:w-[150px]"
-      />
-
-      {/* Purple decorative shape */}
+      >
+        <img
+          className="absolute left-[calc(50%_-_235px)] w-[156px]"
+          src="/lines/pink-arrow-line.png"
+          alt=""
+        />
+        <img
+          className="absolute left-[calc(50%_-_160px)] w-[156px]"
+          src="/lines/pink-arrow-line.png"
+          alt=""
+        />
+      </div>
       <img
+        className="absolute top-[180px] right-[6.5%] w-[124px] max-[900px]:-right-[30px] max-[900px]:w-[100px]"
         src="/styled-container/purple-half-circle.png"
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute right-[-18px] top-[46%] w-[72px] -translate-y-1/2 object-contain sm:right-[4%] sm:w-[88px] md:right-[7%] md:w-[105px] lg:right-[8%] lg:w-[120px]"
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1240px]">
-        <div className="mx-auto max-w-[760px] text-center">
-          <h2 className="m-0 text-[50px] font-normal leading-[0.88] tracking-[-0.045em] text-black sm:text-[64px] md:text-[78px] lg:text-[88px]">
-            Subscribe to
-            <br />
-            our newsletter
-          </h2>
+      <div className="relative z-[2] pt-[121px] text-center max-[900px]:px-5 max-[900px]:pt-[110px] max-[900px]:pb-20 max-[600px]:pt-[105px]">
+        <h2 className="font-gerbil text-[82px] leading-[0.86] font-normal tracking-[-0.045em] max-[900px]:text-[clamp(60px,11vw,86px)] tracking-wide">
+          Subscribe to
+          <br />
+          our newsletter
+        </h2>
+        <p className="mt-[23px] text-[13px] max-[600px]:text-[11px]">
+          To make your stay special and even more memorable
+        </p>
 
-          <p className="mx-auto mt-5 max-w-[400px] text-[10px] leading-[1.5] text-[#222222] sm:text-[11px] md:text-[12px]">
-            To make your stay special and even more memorable
-          </p>
-
-          <form
-            className="mx-auto mt-7 flex max-w-[440px] flex-col items-center gap-3 sm:flex-row sm:justify-center"
-            onSubmit={(event) => {
-              event.preventDefault();
-            }}
+        <form
+          className="mt-[27px] flex min-h-[52px] items-center justify-center gap-2.5 max-[600px]:flex-col"
+          onSubmit={handleSubmit}
+        >
+          <label className="sr-only" htmlFor="newsletter-email">
+            Email address
+          </label>
+          <input
+            ref={inputRef}
+            id="newsletter-email"
+            type="email"
+            inputMode="email"
+            autoComplete="email"
+            placeholder="Email address"
+            required={isOpen}
+            tabIndex={isOpen ? 0 : -1}
+            className={`h-[52px] rounded-full border border-ink bg-transparent text-sm opacity-0 outline-none transition-[width,padding,opacity] duration-[220ms] focus-visible:shadow-[0_0_0_3px_rgb(8_8_8_/_15%)] ${
+              isOpen
+                ? "w-[250px] px-[21px] opacity-100 max-[600px]:w-[min(280px,calc(100vw_-_48px))]"
+                : "w-0 p-0"
+            }`}
+          />
+          <button
+            className="h-[52px] w-[175px] cursor-pointer rounded-full bg-black text-[13px] text-white transition-[transform,background] duration-[180ms] hover:-translate-y-0.5 hover:bg-[#282828] focus-visible:-translate-y-0.5 focus-visible:bg-[#282828]"
+            type="submit"
           >
-            {/* Visually hidden initially, opens cleanly for accessibility */}
-            <label htmlFor="newsletter-email" className="sr-only">
-              Email address
-            </label>
-
-            <input
-              id="newsletter-email"
-              type="email"
-              placeholder="Enter your email"
-              className="hidden h-[46px] w-full rounded-full border border-black bg-transparent px-5 text-[13px] outline-none placeholder:text-black/60 focus:ring-2 focus:ring-black/20 sm:max-w-[270px]"
-            />
-
-            <button
-              type="button"
-              onClick={handleSubscribe}
-              className="group inline-flex min-h-[42px] items-center justify-center rounded-full bg-black px-8 py-3 text-[11px] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#252525] focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 focus:ring-offset-[#d8f5e2] sm:text-[12px]"
-            >
-              <span>Subscribe Now</span>
-
-              <span
-                aria-hidden="true"
-                className="ml-0 max-w-0 overflow-hidden opacity-0 transition-all duration-300 group-hover:ml-2 group-hover:max-w-5 group-hover:opacity-100"
-              >
-                →
-              </span>
-            </button>
-          </form>
-        </div>
+            Subscribe Now
+          </button>
+        </form>
       </div>
     </section>
   );

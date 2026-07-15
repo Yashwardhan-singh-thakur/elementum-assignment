@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navigationItems = [
   { label: "Home", href: "#home" },
@@ -8,30 +8,41 @@ const navigationItems = [
   { label: "FAQs", href: "#faqs" },
 ];
 
+const animatedLinkClasses =
+  "relative w-fit after:absolute after:right-0 after:-bottom-1 after:left-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-[180ms] after:content-[''] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100";
+
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  useEffect(() => {
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setIsMenuOpen(false);
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, []);
 
   return (
-    <header className="relative z-50 bg-white">
-      <div className="mx-auto flex h-[74px] w-full max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-14">
+    <header className="relative z-[100] h-[72px] bg-white">
+      <div className="mx-auto flex h-[72px] w-[min(calc(100%_-_64px),1200px)] items-center justify-between max-[900px]:w-[min(calc(100%_-_40px),700px)]">
         <a
+          className="font-gerbil text-[23px] leading-none tracking-[-0.035em] max-[600px]:text-xl tracking-wide"
           href="#home"
-          className="text-[20px] tracking-[-0.04em] text-black"
-          onClick={closeMenu}
+          onClick={() => setIsMenuOpen(false)}
         >
           Elementum
         </a>
 
-        <nav className="hidden items-center gap-10 text-[13px] lg:flex">
+        <nav
+          className="absolute left-1/2 flex -translate-x-1/2 gap-[47px] text-[13px] max-[900px]:hidden"
+          aria-label="Primary navigation"
+        >
           {navigationItems.map((item) => (
             <a
+              className={animatedLinkClasses}
               key={item.label}
               href={item.href}
-              className="relative py-2 after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-black after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100"
             >
               {item.label}
             </a>
@@ -39,46 +50,48 @@ function Header() {
         </nav>
 
         <button
+          className="flex size-9 cursor-pointer flex-col items-end justify-center gap-[7px] border-0 bg-transparent p-0"
           type="button"
-          className="flex h-11 w-11 flex-col items-end justify-center gap-[6px]"
           aria-label="Toggle navigation menu"
           aria-expanded={isMenuOpen}
-          onClick={() => setIsMenuOpen((currentValue) => !currentValue)}
+          aria-controls="mobile-navigation"
+          onClick={() => setIsMenuOpen((current) => !current)}
         >
           <span
-            className={`block h-px bg-black transition-all duration-200 ${
-              isMenuOpen ? "w-6 translate-y-[3.5px] rotate-45" : "w-6"
+            className={`block h-[1.5px] bg-ink transition-[transform,width] duration-[180ms] ${
+              isMenuOpen
+                ? "w-[30px] translate-y-[4.25px] rotate-45"
+                : "w-[34px]"
             }`}
           />
-
           <span
-            className={`block h-px bg-black transition-all duration-200 ${
-              isMenuOpen ? "w-6 -translate-y-[3.5px] -rotate-45" : "w-4"
+            className={`block h-[1.5px] bg-ink transition-[transform,width] duration-[180ms] ${
+              isMenuOpen ? "w-[30px] -translate-y-[4.25px] -rotate-45" : "w-6"
             }`}
           />
         </button>
       </div>
 
-      <div
-        className={`absolute left-4 right-4 top-[70px] border border-neutral-200 bg-white p-3 shadow-lg transition-all duration-200 lg:hidden ${
+      <nav
+        id="mobile-navigation"
+        className={`absolute top-16 right-6 grid w-[min(320px,calc(100%_-_48px))] border border-[#dedede] bg-white px-5 py-2.5 shadow-[0_18px_45px_rgb(0_0_0_/_10%)] transition-[opacity,transform] duration-[180ms] ${
           isMenuOpen
-            ? "visible translate-y-0 opacity-100"
-            : "invisible -translate-y-3 opacity-0"
+            ? "pointer-events-auto translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-2.5 opacity-0"
         }`}
+        aria-label="Mobile navigation"
       >
-        <nav className="flex flex-col">
-          {navigationItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="border-b border-neutral-100 px-4 py-4 text-lg last:border-none"
-              onClick={closeMenu}
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
-      </div>
+        {navigationItems.map((item) => (
+          <a
+            className="border-b border-[#ececec] px-1 py-[15px] last:border-b-0"
+            key={item.label}
+            href={item.href}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
     </header>
   );
 }

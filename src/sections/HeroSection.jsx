@@ -1,108 +1,33 @@
-const teamMembers = [
-  {
-    id: 1,
-    image: "/team-members/member-1.png",
-    alt: "Elementum team member",
-    position:
-      "left-[1%] top-[105px] h-[100px] w-[100px] lg:left-[0%] lg:top-[110px]",
-  },
-  {
-    id: 2,
-    image: "/team-members/member-2.png",
-    alt: "Elementum team member",
-    position: "left-[12%] top-[78px] h-[100px] w-[100px] lg:left-[11%]",
-  },
-  {
-    id: 3,
-    image: "/team-members/member-3.png",
-    alt: "Elementum team member",
-    position: "left-[30%] top-[4px] h-[118px] w-[118px] lg:left-[29%]",
-  },
-  {
-    id: 4,
-    image: "/team-members/member-4.png",
-    alt: "Elementum team member",
-    position: "left-[39%] top-[112px] h-[108px] w-[108px] lg:left-[38%]",
-  },
-  {
-    id: 5,
-    image: "/team-members/member-5.png",
-    alt: "Elementum team member",
-    position: "left-[55%] top-[38px] h-[115px] w-[115px] lg:left-[54%]",
-  },
-  {
-    id: 6,
-    image: "/team-members/member-6.png",
-    alt: "Gudiputi Sangeetha",
-    position: "left-[66%] top-[84px] h-[108px] w-[108px] lg:left-[65%]",
-    featured: true,
-    label: "Gudiputi Sangeetha",
-  },
-  {
-    id: 7,
-    image: "/team-members/member-7.png",
-    alt: "Elementum team member",
-    position: "left-[77%] top-[7px] h-[130px] w-[130px] lg:left-[76%]",
-  },
-  {
-    id: 8,
-    image: "/team-members/member-8.png",
-    alt: "Elementum team member",
-    position: "right-[0%] top-[80px] h-[112px] w-[112px] lg:right-[1%]",
-  },
-];
+import HighlightText, { UnderlinedText } from "../components/HighlightText";
 
-function HighlightedWord({
-  children,
-  image,
-  imageClassName = "",
-  className = "",
-}) {
-  return (
-    <span
-      className={`relative isolate inline-block whitespace-nowrap ${className}`}
-    >
-      <img
-        src={image}
-        alt=""
-        aria-hidden="true"
-        className={`pointer-events-none absolute left-1/2 top-1/2 -z-10 max-w-none -translate-x-1/2 -translate-y-1/2 ${imageClassName}`}
-      />
+const memberPositionClasses = {
+  1: "top-[164px] left-[1.9%] size-[148px]",
+  2: "top-[112px] left-[10.8%] size-40",
+  3: "top-0 left-[28.8%] size-[170px]",
+  4: "top-[170px] left-[35.3%] size-[170px]",
+  5: "top-[41px] left-[50.8%] size-[170px]",
+  6: "top-[111px] left-[59.8%] size-[158px]",
+  7: "top-0 left-[73.7%] size-[170px]",
+  8: "top-[119px] right-[1.8%] size-[170px]",
+};
 
-      <span className="relative z-10">{children}</span>
-    </span>
-  );
-}
+const teamMembers = Array.from({ length: 8 }, (_, index) => ({
+  id: index + 1,
+  image: `/team-members/member-${index + 1}.png`,
+  alt: "Elementum team member",
+}));
 
 function TeamMember({ member }) {
   return (
-    <div className={`absolute z-10 ${member.position}`}>
-      <div className="relative h-full w-full overflow-hidden rounded-full bg-[#eeeeee]">
-        <img
-          src={member.image}
-          alt={member.alt}
-          className="h-full w-full object-cover"
-        />
-      </div>
-
-      {member.featured && (
-        <span className="absolute left-[56%] top-[42%] z-30 whitespace-nowrap bg-[#f000b8] px-[8px] py-[4px] text-[11px] leading-none text-white lg:text-[12px]">
-          {member.label}
-        </span>
-      )}
-    </div>
-  );
-}
-
-function MobileTeamMember({ member }) {
-  return (
-    <div className="relative h-[70px] w-[70px] shrink-0 overflow-hidden rounded-full bg-[#eeeeee] sm:h-[82px] sm:w-[82px]">
+    <figure
+      className={`absolute m-0 overflow-hidden rounded-full bg-[#ededed] max-[900px]:static max-[900px]:size-auto max-[900px]:aspect-square ${memberPositionClasses[member.id]}`}
+    >
       <img
+        className="size-full object-cover"
         src={member.image}
         alt={member.alt}
-        className="h-full w-full object-cover"
       />
-    </div>
+    </figure>
   );
 }
 
@@ -110,91 +35,55 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-[680px] overflow-hidden bg-white pb-16 pt-8 sm:pt-12 md:min-h-[760px] md:pb-8 lg:min-h-[790px] lg:pt-14"
+      className="relative h-[958px] overflow-hidden bg-white max-[900px]:h-auto max-[900px]:min-h-[930px] max-[900px]:pb-20 max-[600px]:min-h-0"
     >
-      {/* Left decorative lines */}
       <div
+        className="pointer-events-none absolute top-[366px] -left-2.5 z-[2] h-[290px] w-[126px] max-[900px]:hidden"
         aria-hidden="true"
-        className="pointer-events-none absolute -left-[46px] top-[174px] hidden h-[230px] w-[105px] md:block lg:-left-[38px]"
       >
         <img
+          className="absolute top-0 left-0 h-full w-auto object-contain"
           src="/lines/left-curly-pink-line.png"
           alt=""
-          className="absolute left-0 top-0 h-full w-full object-contain"
         />
-
         <img
+          className="absolute top-2 left-7 h-full w-auto object-contain"
           src="/lines/left-curly-black-line.png"
           alt=""
-          className="absolute left-[24px] top-[10px] h-full w-full object-contain"
         />
       </div>
 
-      {/* Purple shape */}
       <img
+        className="pointer-events-none absolute top-[244px] right-[7.1%] z-[2] w-[84px] max-[900px]:hidden"
         src="/styled-container/purple-half-circle.png"
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute right-[5%] top-[145px] hidden h-auto w-[58px] object-contain md:block lg:right-[7%] lg:top-[160px] lg:w-[68px]"
       />
 
-      <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 md:px-12 lg:px-16">
-        {/* Main heading */}
-        <div className="relative z-10 mx-auto max-w-[1050px] text-center">
-          <h1 className="m-0 text-[12px] font-normal leading-[0.94] tracking-[-0.042em] text-black sm:text-[24px] md:text-[38px] lg:text-[54px] xl:text-[60px]">
-            The{" "}
-            <span className="relative inline-block whitespace-nowrap">
-              <span className="relative z-10">thinkers</span>
+      <div className="relative z-[3] mx-auto w-[min(calc(100%_-_64px),1120px)] pt-[119px] text-center max-[900px]:w-[min(calc(100%_-_40px),760px)] max-[900px]:pt-[70px] max-[600px]:pt-12">
+        <h1 className="m-0 font-gerbil text-[70px] leading-[1.08] font-normal tracking-[-0.042em] max-[1200px]:text-[clamp(72px,7.1vw,86px)] max-[900px]:text-[clamp(46px,9vw,72px)] max-[600px]:text-[clamp(38px,11vw,52px)] max-[600px]:leading-[0.96] tracking-wide">
+          The <UnderlinedText>thinkers</UnderlinedText> and
+          <br />
+          doers were <HighlightText color="pink">changing</HighlightText>
+          <br />
+          the <HighlightText>status</HighlightText> Quo with
+        </h1>
 
-              <img
-                src="/lines/yellow-line.png"
-                alt=""
-                aria-hidden="true"
-                className="pointer-events-none absolute -bottom-[0.06em] left-1/2 -z-0 h-auto w-[105%] max-w-none -translate-x-1/2"
-              />
-            </span>{" "}
-            and
-            <br className="hidden sm:block" />
-            <span className="sm:hidden"> </span>
-            doers were{" "}
-            <HighlightedWord
-              image="/styled-container/pink-pill-con.png"
-              imageClassName="h-[0.58em] w-[106%]"
-            >
-              changing
-            </HighlightedWord>
-            <br className="hidden sm:block" />
-            <span className="sm:hidden"> </span>
-            the{" "}
-            <HighlightedWord
-              image="/styled-container/status-background-pill-con.png"
-              imageClassName="h-[0.58em] w-[112%]"
-            >
-              status
-            </HighlightedWord>{" "}
-            quo with
-          </h1>
+        <p className="mt-9 text-[15px] leading-[1.55] tracking-[-0.01em] max-[900px]:mx-auto max-[900px]:max-w-[570px] max-[600px]:mt-7 max-[600px]:text-xs">
+          We are a team of strategists, designers communicators, researchers.
+          Together,
+          <br className="max-[600px]:hidden" /> we believe that progress only
+          happens when you refuse to play things safe.
+        </p>
+      </div>
 
-          <p className="mx-auto mt-7 max-w-[510px] px-4 text-[11px] leading-[1.5] tracking-[-0.01em] text-[#202020] sm:text-[12px] md:mt-8 md:px-0 md:text-[13px] lg:text-[10px]">
-            We are a team of strategists, designers, communicators, researchers.
-            Together, we believe that progress only happens when you refuse to
-            play things safe.
-          </p>
-        </div>
-
-        {/* Desktop and tablet team-member layout */}
-        <div className="relative mx-auto mt-9 hidden h-[250px] w-full max-w-[1240px] md:block lg:mt-10">
-          {teamMembers.map((member) => (
-            <TeamMember key={member.id} member={member} />
-          ))}
-        </div>
-
-        {/* Mobile team-member layout */}
-        <div className="mx-auto mt-10 grid max-w-[390px] grid-cols-4 place-items-center gap-x-2 gap-y-5 md:hidden">
-          {teamMembers.map((member) => (
-            <MobileTeamMember key={member.id} member={member} />
-          ))}
-        </div>
+      <div
+        className="absolute top-[520px] left-1/2 h-[365px] w-[min(100%,1440px)] -translate-x-1/2 max-[900px]:relative max-[900px]:top-auto max-[900px]:left-auto max-[900px]:mx-auto max-[900px]:mt-[70px] max-[900px]:grid max-[900px]:h-auto max-[900px]:w-[min(calc(100%_-_40px),650px)] max-[900px]:translate-x-0 max-[900px]:grid-cols-4 max-[900px]:gap-[26px] max-[600px]:mt-12 max-[600px]:gap-3"
+        aria-label="Meet the Elementum team"
+      >
+        {teamMembers.map((member) => (
+          <TeamMember key={member.id} member={member} />
+        ))}
       </div>
     </section>
   );
