@@ -47,7 +47,7 @@ function NewsletterSection() {
       />
 
       <div className="relative z-[2] px-5 pt-24 pb-16 text-center sm:pt-26 sm:pb-20 lg:px-0 lg:pt-[110px] lg:pb-0">
-        <h2 className="font-gerbil text-[clamp(40px,11vw,44px)] leading-[1.02] font-normal tracking-[-0.045em] tracking-wide sm:text-[56px] md:text-[64px] lg:text-[70px] lg:leading-[90px]">
+        <h2 className="font-gerbil text-[clamp(40px,11vw,44px)] leading-[1.02] font-normal tracking-[-0.045em] tracking-wide sm:text-[56px] md:text-[64px] lg:text-[65px] xl:text-[70px] lg:leading-[90px]">
           Subscribe to
           <br />
           our newsletter

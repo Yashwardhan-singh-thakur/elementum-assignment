@@ -2,13 +2,13 @@ import HighlightText from "../components/HighlightText";
 import UnderlinedText from "../components/UnderlinedText";
 
 const customerPositionClasses = {
-  1: "top-[110px] left-0 size-[86px]",
-  2: "top-[260px] -left-[68px] size-14",
-  3: "top-[290px] left-[30px] size-38",
-  4: "top-[438px] -left-[82px] size-[86px]",
-  5: "top-27 right-[-15px] size-[106px]",
-  6: "top-[170px] right-[136px] size-[64px]",
-  7: "top-[275px] right-[96px] size-20",
+  1: "top-[110px] left-0 lg:left-[-35px] xl:left-0 size-[86px]",
+  2: "top-[260px] lg:top-[220px] xl:top-[260px] -left-[68px] lg:-left-[88px] xl:-left-[68px] size-14",
+  3: "top-[290px] lg:top-[290px] xl:top-[290px] left-[30px] lg:left-[-70px] xl:left-[30px] size-38",
+  4: " top-[438px] lg:top-[448px] xl:top-[438px] -left-[82px] lg:-left-[92px] xl:-left-[82px] size-[86px]",
+  5: "top-27 right-[-15px] lg:right-[-85px] xl:right-[-15px] size-[106px]",
+  6: "top-[170px] right-[136px] lg:right-[60px] xl:right-[136px] size-[64px]",
+  7: "top-[275px] lg:top-[250px] xl:top-[275px] right-[96px] lg:right-[-30px] xl:right-[96px] size-20",
   8: "top-[360px] -right-[90px] size-[210px]",
 };
 
@@ -40,7 +40,7 @@ function TestimonialsSection() {
           </UnderlinedText>
         </h2>
 
-        <article className="relative z-[2] mt-10 flex min-h-0 w-full max-w-[660px] items-center rounded-[30px] bg-quote px-[30px] py-10 text-center sm:mt-12 sm:rounded-[36px] sm:px-12 sm:py-11 md:px-14 lg:absolute lg:top-[245px] lg:left-1/2 lg:mt-0 lg:min-h-[220px] lg:w-[630px] lg:-translate-x-1/2 lg:rounded-[42px] lg:px-[70px] lg:py-[42px]">
+        <article className="relative z-[2] mt-10 flex min-h-0 w-full max-w-[660px] items-center rounded-[30px] bg-quote px-[30px] py-10 text-center sm:mt-12 sm:rounded-[36px] sm:px-12 sm:py-11 md:px-14 lg:absolute lg:top-[245px] lg:left-1/2 lg:mt-0 lg:min-h-[220px] lg:w-[630px] lg:-translate-x-1/2 lg:rounded-[42px]  lg:px-[70px] lg:py-[42px]">
           <span
             className="absolute top-2 left-6 font-serif text-[80px] leading-none font-extrabold text-[#c6d1c9] sm:top-3 sm:left-10 sm:text-[100px] lg:top-[15px] lg:left-[45px] lg:text-[116px]"
             aria-hidden="true"
@@ -63,7 +63,7 @@ function TestimonialsSection() {
         </article>
 
         <div
-          className="relative z-[1] mt-10 grid w-full max-w-[620px] grid-cols-4 gap-3 sm:mt-12 sm:gap-5 md:gap-[22px] lg:absolute lg:inset-0 lg:mt-0 lg:block lg:max-w-none"
+          className="relative z-[5] mt-10 grid w-full max-w-[620px] grid-cols-4 gap-3 sm:mt-12 sm:gap-5 md:gap-[22px] lg:absolute lg:inset-0 lg:mt-0 lg:block lg:max-w-none"
           aria-label="Elementum customers"
         >
           {customers.map((customer) => (

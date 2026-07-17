@@ -42,23 +42,23 @@ export default function HeroSection() {
       </div>
 
       <img
-        className="pointer-events-none absolute top-[244px] right-[7.1%] z-[2] hidden w-[84px] lg:block"
+        className="pointer-events-none absolute top-[244px] right-[7.1%] lg:right-[3%] xl:right-[6.2%] z-[2] hidden w-[84px] lg:block"
         src="/styled-container/purple-half-circle.png"
         alt=""
         aria-hidden="true"
       />
 
       <div className="relative z-[3] mx-auto w-[min(calc(100%_-_40px),760px)] pt-10 text-center sm:w-[min(calc(100%_-_64px),760px)] sm:pt-14 md:w-[min(calc(100%_-_64px),900px)] md:pt-16 lg:w-[min(calc(100%_-_64px),1120px)] lg:pt-[119px]">
-        <h1 className="m-0 font-gerbil  text-[clamp(34px,9.2vw,36px)] leading-[1.12] font-normal tracking-wide sm:text-[48px] sm:leading-[1.1] md:text-[clamp(52px,6vw,58px)] lg:text-[70px] lg:leading-[90px] lg:max-[1200px]:text-[clamp(58px,5.8vw,70px)]">
+        <h1 className="m-0 font-gerbil  text-[clamp(34px,9.2vw,36px)] leading-[1.12] font-normal tracking-wide sm:text-[48px] sm:leading-[1.1] md:text-[clamp(50px,6vw,58px)] lg:text-[64px] xl:text-[70px] md:leading-[65px] lg:leading-[80px] xl:leading-[90px] lg:max-[1200px]:text-[clamp(58px,5.8vw,70px)]">
           The{" "}
-          <UnderlinedText className="after:left-1/2 after:-bottom-[0.14em] after:h-[0.59em] after:w-[105%] after:-translate-x-1/2 lg:after:w-[440px]">
+          <UnderlinedText className="after:left-1/2  after:-bottom-[0.14em] after:h-[0.58em] after:w-[105%] after:-translate-x-1/2 md:after:w-[300px] lg:after:w-[350px] xl:after:w-[420px]">
             thinkers
           </UnderlinedText>{" "}
           and <br className="hidden lg:block" />
           doers were{" "}
           <HighlightText
             color="pink"
-            className="before:bottom-[-0.08em] before:-left-[0.25em] before:h-[1.35em] lg:before:-left-[-1.75em]"
+            className="before:bottom-[-0.08em] before:-left-[0.25em] before:h-[1.35em] sm:before:-left-[-1.75em]"
           >
             changing
           </HighlightText>{" "}

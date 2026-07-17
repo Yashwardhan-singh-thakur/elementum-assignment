@@ -1,3 +1,5 @@
+import FooterList from "../components/FooterList";
+
 const companyLinks = [
   { label: "Home", href: "#home" },
   { label: "Studio", href: "#studio" },
@@ -22,27 +24,6 @@ const socialLinks = [
 const animatedLinkClasses =
   "relative w-fit after:absolute after:right-0 after:-bottom-1 after:left-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-[180ms] after:content-[''] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100";
 
-function FooterList({ title, links }) {
-  return (
-    <div>
-      <h3 className="font-gerbil text-lg font-normal sm:text-lg">{title}</h3>
-      <nav className="mt-6 flex flex-col gap-5 text-xs leading-[1.45] sm:mt-8 sm:gap-[25px] sm:text-[13px]">
-        {links.map((link) => (
-          <a
-            className={animatedLinkClasses}
-            key={link.label}
-            href={link.href}
-            target={link.external ? "_blank" : undefined}
-            rel={link.external ? "noreferrer" : undefined}
-          >
-            {link.label}
-          </a>
-        ))}
-      </nav>
-    </div>
-  );
-}
-
 function Footer() {
   return (
     <footer
@@ -51,12 +32,24 @@ function Footer() {
     >
       <div className="relative mx-auto min-h-[600px] w-[min(calc(100%_-_40px),900px)] border-t border-[#4a524d] pb-20 sm:min-h-[520px] sm:w-[min(calc(100%_-_64px),900px)] md:min-h-[500px] lg:h-full lg:min-h-0 lg:w-[min(calc(100%_-_64px),1200px)] lg:pb-0">
         <div className="grid grid-cols-2 gap-x-8 gap-y-12 pt-12 sm:gap-x-12 md:grid-cols-4 md:gap-x-8 md:gap-y-0 md:pt-16 lg:gap-[72px] lg:pt-[72px]">
-          <FooterList title="Company" links={companyLinks} />
-          <FooterList title="Terms & Policies" links={policyLinks} />
-          <FooterList title="Follow Us" links={socialLinks} />
+          <FooterList
+            title="Company"
+            links={companyLinks}
+            animatedLinkClasses={animatedLinkClasses}
+          />
+          <FooterList
+            title="Terms & Policies"
+            links={policyLinks}
+            animatedLinkClasses={animatedLinkClasses}
+          />
+          <FooterList
+            title="Follow Us"
+            links={socialLinks}
+            animatedLinkClasses={animatedLinkClasses}
+          />
 
           <div>
-            <h3 className="font-gerbil text-base font-normal sm:text-lg">
+            <h3 className="font-gerbil text-base lg:text-base xl:text-lg  font-normal sm:text-lg">
               Terms &amp; Policies
             </h3>
             <address className="mt-6 flex flex-col gap-5 text-xs leading-[1.45] not-italic sm:mt-8 sm:gap-[25px] sm:text-[13px]">

@@ -7,11 +7,13 @@ function ServiceRow({ service }) {
       <p className="col-start-1 whitespace-pre-line text-[11px] leading-[1.4] sm:text-xs md:text-[13px] lg:text-[20px]">
         {service.category}
       </p>
-      <h3 className="relative z-2 col-span-full row-start-2 font-gerbil text-[30px] leading-[1.05] font-normal tracking-[-0.035em] tracking-wide transition-transform duration-[180ms] group-hover:translate-x-2 group-focus-visible:translate-x-2 sm:col-auto sm:row-auto sm:text-[34px] md:text-[clamp(34px,4.4vw,42px)] lg:text-[40px] lg:leading-none lg:max-[1200px]:text-[42px]">
+      <h3 className="relative z-2 col-span-full row-start-2 font-gerbil text-[30px] leading-[1.05] font-normal tracking-[-0.035em] tracking-wide transition-transform duration-[180ms] group-hover:translate-x-2 group-focus-visible:translate-x-2 sm:col-auto sm:row-auto sm:text-[34px] md:text-[clamp(34px,4.4vw,42px)]  lg:text-[35px] xl:text-[42px] lg:leading-none ">
         {service.title}
         {service.decorated && (
           <img
-            className="absolute top-1/2 left-[55%] z-[-1] size-16 -translate-y-1/2 sm:size-[76px] md:size-[88px] lg:size-[104px]"
+            className="absolute top-1/2 left-[55%] z-[-1] size-16 -translate-y-1/2
+             sm:size-[76px] md:size-[88px] lg:size-[104px]
+             animate-[spin_15s_linear_infinite]"
             src="/progres-img.png"
             alt=""
           />

@@ -16,12 +16,12 @@ function ProgressSection() {
             aria-hidden="true"
           />
           <img
-            className="relative z-[3] size-full rounded-full object-cover lg:size-[420px]"
+            className="relative z-[3] size-full rounded-full object-cover lg:size-[400px] xl:size-[420px]"
             src="/tom-sec-img2.png"
             alt="Elementum team members collaborating during a working session"
           />
           <img
-            className="pointer-events-none absolute right-0 bottom-3 -bottom-6 z-[3] w-[170px] max-lg:-right-[2%] max-lg:-bottom-[5%] max-lg:w-[38%] max-lg:max-w-[140px]"
+            className="pointer-events-none absolute right-0 bottom-3 -bottom-6 z-[3] w-[170px] max-lg:-right-[2%] max-lg:-bottom-[5%]   max-xl:-right-[2%] max-xl:-bottom-[5%]  max-lg:w-[38%] max-lg:max-w-[140px]"
             src="/styled-container/pink-triangle.png"
             alt="pink-triangle"
             aria-hidden="true"
@@ -29,17 +29,15 @@ function ProgressSection() {
         </div>
 
         <div className="static z-[2] w-full max-w-[620px] md:max-w-none lg:absolute lg:top-[145px] lg:left-[678px] lg:w-[600px] lg:max-[1200px]:left-[56%] lg:max-[1200px]:w-[44%]">
-          <h2 className="m-0 origin-left font-gerbil text-[40px] leading-[1.12] font-normal tracking-[-0.042em] tracking-wide sm:text-[44px] md:text-[48px] lg:scale-x-90 lg:text-[40px] lg:leading-[55px] lg:max-[1200px]:text-5xl">
+          <h2 className="m-0 origin-left font-gerbil text-[40px] leading-[1.12] font-normal tracking-[-0.042em] tracking-wide sm:text-[44px] md:text-[25px] lg:scale-x-90 lg:text-[34px] md:leading-[35px] lg:leading-[50px] ">
             <HighlightText
               color="mint"
               className="before:-left-[0.25em] before:h-[1.40em] before:bottom-[0.15em] "
             >
               See
             </HighlightText>{" "}
-            how we can{" "}
-            <br className="hidden lg:block" />
-            help your{" "}
-            <UnderlinedText className="after:left-1/2 after:-bottom-[0.14em] after:h-[0.59em] after:w-[105%] after:-translate-x-1/2 lg:after:w-[290px]">
+            how we can <br className="hidden lg:block" /> help your{" "}
+            <UnderlinedText className="after:left-1/2 after:-bottom-[0.05em] after:h-[0.59em] after:w-[125%] after:-translate-x-1/2  lg:after:w-[250px] ">
               progress
             </UnderlinedText>
           </h2>
