@@ -49,9 +49,9 @@ export default function HeroSection() {
       />
 
       <div className="relative z-[3] mx-auto w-[min(calc(100%_-_40px),760px)] pt-10 text-center sm:w-[min(calc(100%_-_64px),760px)] sm:pt-14 md:w-[min(calc(100%_-_64px),900px)] md:pt-16 lg:w-[min(calc(100%_-_64px),1120px)] lg:pt-[119px]">
-        <h1 className="m-0 font-gerbil  font-normal tracking-wide text-[30px]  sm:text-[40px] md:text-[clamp(50px,6vw,58px)] lg:text-[64px] xl:text-[70px] leading-[38px] sm:leading-[54px] md:leading-[65px] lg:leading-[80px] xl:leading-[90px] lg:max-[1200px]:text-[clamp(58px,5.8vw,70px)]">
+        <h1 className="m-0 font-gerbil  font-normal tracking-wide text-[30px]  sm:text-[40px] md:text-[clamp(50px,6vw,58px)] lg:text-[64px] xl:text-[70px] leading-[38px] sm:leading-[54px] md:leading-[65px] min-[900px]:max-[1023px]:!leading-[75px]  lg:leading-[80px] xl:leading-[90px] lg:max-[1200px]:text-[clamp(58px,5.8vw,70px)]">
           The{" "}
-          <UnderlinedText className="after:left-1/2  after:-bottom-[0.14em] after:h-[0.58em] after:w-[105%] after:-translate-x-1/2 after:w-[180px] sm:after:w-[230px]  md:after:w-[300px] lg:after:w-[350px] xl:after:w-[420px]">
+          <UnderlinedText className="after:left-1/2  after:-bottom-[0.14em]  after:h-[0.58em] after:w-[105%] after:-translate-x-1/2 after:w-[180px] sm:after:w-[230px]  md:after:w-[300px] lg:after:w-[350px] xl:after:w-[420px]">
             thinkers
           </UnderlinedText>{" "}
           and <br className="hidden lg:block" />
