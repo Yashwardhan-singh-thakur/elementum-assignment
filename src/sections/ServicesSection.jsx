@@ -48,7 +48,7 @@ function ServicesSection() {
           >
             can
           </HighlightText>{" "}
-          <br className="hidden sm:block" />
+          <br />
           <UnderlinedText className="z-[-1] after:left-1/2 after:-bottom-[-0.02em]   lg:after:-bottom-[-0.05em] after:h-[0.3em] after:w-[105%] after:-translate-x-1/2 sm:after:w-[150px]   lg:after:w-[220px]">
             offer
           </UnderlinedText>{" "}
