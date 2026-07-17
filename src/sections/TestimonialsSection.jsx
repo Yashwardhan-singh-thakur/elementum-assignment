@@ -25,7 +25,7 @@ function TestimonialsSection() {
       className="relative h-auto overflow-hidden bg-white px-0 py-16 sm:py-20 md:py-24 lg:h-[726px] lg:px-20 lg:py-0"
     >
       <div className="relative mx-auto flex h-auto w-[min(calc(100%_-_40px),700px)] flex-col items-center sm:w-[min(calc(100%_-_64px),700px)] lg:block lg:h-full lg:w-[min(calc(100%_-_64px),1200px)]">
-        <h2 className="static z-[3] m-0 w-full text-center font-gerbil text-[38px] leading-[1.08] font-normal tracking-[-0.04em] tracking-wide sm:text-[44px] md:text-[50px] lg:absolute lg:top-[106px] lg:left-1/2 lg:w-[690px] lg:-translate-x-1/2 lg:text-[40px] lg:leading-[50px]">
+        <h2 className="static z-[3] m-0 w-full text-center font-gerbil text-[38px] leading-[1.08] font-normal tracking-[-0.04em] tracking-wide sm:text-[44px] md:text-[35px] lg:absolute lg:top-[106px] lg:left-1/2 lg:w-[690px] lg:-translate-x-1/2 lg:text-[40px]  md:leading-[45px]   lg:leading-[50px]">
           <HighlightText
             color="mint"
             className="before:-left-[0.35em] before:h-[1.30em] before:bottom-[0.05em] "
@@ -35,7 +35,7 @@ function TestimonialsSection() {
           our customer
           <br />
           says{" "}
-          <UnderlinedText className="after:left-1/2 after:-bottom-[0.18em] after:h-[0.59em] after:w-[105%] after:-translate-x-1/2 lg:after:w-[290px]">
+          <UnderlinedText className="after:left-1/2 after:-bottom-[0.18em] after:h-[0.59em] after:w-[105%] after:-translate-x-1/2 md:after:w-[250px] lg:after:w-[290px]">
             About Us
           </UnderlinedText>
         </h2>

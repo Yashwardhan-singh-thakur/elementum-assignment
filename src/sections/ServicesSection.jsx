@@ -39,17 +39,17 @@ function ServicesSection() {
           className="m-0 w-full origin-top-left font-gerbil text-[48px]
         leading-[1.02] font-normal tracking-[-0.045em] tracking-wide
         sm:text-[56px] lg:w-[850px] lg:translate-y-[22px]
-        lg:scale-y-110c  md:text-[40px]  lg:text-[60px] lg:leading-[80px]"
+        lg:scale-y-110c  md:text-[40px]  lg:text-[60px]  md:leading-[48px] lg:leading-[70px]"
         >
           What we{" "}
           <HighlightText
             color="mint"
-            className="before:-left-[0.25em] before:h-[0.9em] before:bottom-[0.18em]  lg:before:bottom-[0.25em] xl:before:bottom-[0.18em] "
+            className="before:-left-[0.25em] before:h-[0.9em] before:bottom-[0.18em]"
           >
             can
           </HighlightText>{" "}
           <br className="hidden md:block" />
-          <UnderlinedText className="z-[-1] after:left-1/2 after:-bottom-[-0.02em]   lg:after:-bottom-[-0.11em] xl:after:-bottom-[-0.02em] after:h-[0.3em] after:w-[105%] after:-translate-x-1/2  lg:after:w-[210px] xl:after:w-[250px]">
+          <UnderlinedText className="z-[-1] after:left-1/2 after:-bottom-[-0.02em]   lg:after:-bottom-[-0.05em] after:h-[0.3em] after:w-[105%] after:-translate-x-1/2 md:after:w-[150px]   lg:after:w-[220px]">
             offer
           </UnderlinedText>{" "}
           you!

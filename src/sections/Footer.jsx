@@ -49,7 +49,7 @@ function Footer() {
           />
 
           <div>
-            <h3 className="font-gerbil text-base lg:text-base xl:text-lg  font-normal sm:text-lg">
+            <h3 className="font-gerbil text-base md:text-sm lg:text-base  xl:text-lg  font-normal ">
               Terms &amp; Policies
             </h3>
             <address className="mt-6 flex flex-col gap-5 text-xs leading-[1.45] not-italic sm:mt-8 sm:gap-[25px] sm:text-[13px]">
