@@ -36,10 +36,10 @@ function ServicesSection() {
 
       <div className="relative z-[1] mx-auto w-[min(calc(100%_-_40px),700px)] sm:w-[min(calc(100%_-_64px),700px)] lg:w-[min(calc(100%_-_64px),1158px)] lg:pt-[135px]">
         <h2
-          className="m-0 w-full origin-top-left font-gerbil text-[48px]
-        leading-[1.02] font-normal tracking-[-0.045em] tracking-wide
-        lg:w-[850px] lg:translate-y-[22px] 
-        sm:text-[40px] lg:text-[60px] sm:leading-[48px] lg:leading-[70px]"
+          className="m-0 w-full origin-top-left font-gerbil 
+       font-normal tracking-[-0.045em] tracking-wide
+        lg:w-[850px] lg:translate-y-[22px]  text-[35px]
+        sm:text-[40px] lg:text-[60px]  leading-[40px]   sm:leading-[48px] lg:leading-[70px]"
         >
           What we{" "}
           <HighlightText

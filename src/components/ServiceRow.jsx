@@ -7,7 +7,7 @@ function ServiceRow({ service }) {
       <p className="col-start-1 whitespace-pre-line text-[11px] leading-[1.4] sm:text-xs md:text-[13px] lg:text-[20px]">
         {service.category}
       </p>
-      <h3 className="relative z-2 col-span-full row-start-2 font-gerbil text-[30px] leading-[1.05] font-normal tracking-[-0.035em] tracking-wide transition-transform duration-[180ms] group-hover:translate-x-2 group-focus-visible:translate-x-2 sm:col-auto sm:row-auto sm:text-[18.8px] md:text-[23.8px]  lg:text-[35px] xl:text-[42px] lg:leading-none ">
+      <h3 className="relative z-2 col-span-full row-start-2 font-gerbil  font-normal tracking-[-0.035em] tracking-wide transition-transform duration-[180ms] group-hover:translate-x-2 group-focus-visible:translate-x-2 sm:col-auto sm:row-auto text-[19.9px] sm:text-[18.8px] md:text-[23.8px]  lg:text-[35px] xl:text-[42px] lg:leading-none ">
         {/* md:text-[clamp(34px,4.4vw,42px)]  */}
         {service.title}
         {service.decorated && (

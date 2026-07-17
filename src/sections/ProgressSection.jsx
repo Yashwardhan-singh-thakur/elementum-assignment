@@ -29,7 +29,7 @@ function ProgressSection() {
         </div>
 
         <div className="static z-[2] w-full max-w-[620px] md:max-w-none lg:absolute lg:top-[145px] lg:left-[678px] lg:w-[600px] lg:max-[1200px]:left-[56%] lg:max-[1200px]:w-[44%]">
-          <h2 className="m-0 origin-left font-gerbil text-[40px] leading-[1.12] font-normal tracking-[-0.042em] tracking-wide sm:text-[34px] md:text-[25px] lg:scale-x-90 lg:text-[34px] sm:leading-[50px] md:leading-[35px] lg:leading-[50px] ">
+          <h2 className="m-0 origin-left font-gerbil  font-normal tracking-[-0.042em] tracking-wide text-[30px]  sm:text-[34px] md:text-[25px] lg:scale-x-90 lg:text-[34px] leading-[43px] sm:leading-[50px] md:leading-[35px] lg:leading-[50px] ">
             <HighlightText
               color="mint"
               className="before:-left-[0.25em] before:h-[1.40em] before:bottom-[0.15em] "

@@ -47,7 +47,7 @@ function NewsletterSection() {
       />
 
       <div className="relative z-[2] px-5 pt-24 pb-16 text-center sm:pt-26 sm:pb-20 lg:px-0 lg:pt-[110px] lg:pb-0">
-        <h2 className="font-gerbil text-[clamp(40px,11vw,44px)] leading-[1.02] font-normal tracking-[-0.045em] tracking-wide sm:text-[45px] md:text-[54px] lg:text-[65px] xl:text-[70px] lg:leading-[90px]">
+        <h2 className="font-gerbil leading-[1.26] font-normal tracking-[-0.045em] tracking-wide text-[30px]  sm:text-[45px] md:text-[54px] lg:text-[65px] xl:text-[70px] lg:leading-[90px]">
           Subscribe to
           <br />
           our newsletter
@@ -57,7 +57,7 @@ function NewsletterSection() {
         </p>
 
         <form
-          className="mt-6 flex min-h-[52px] flex-col items-center justify-center gap-2.5 sm:flex-row lg:mt-[27px]"
+          className="sm:mt-6 flex min-h-[52px] flex-col items-center justify-center gap-2.5 sm:flex-row lg:mt-[27px]"
           onSubmit={handleSubmit}
         >
           <label className="sr-only" htmlFor="newsletter-email">
