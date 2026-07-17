@@ -14,7 +14,7 @@ function TomorrowSection() {
 
       <div className="relative mx-auto grid h-auto w-[min(calc(100%_-_40px),700px)] gap-12 sm:w-[min(calc(100%_-_64px),700px)] sm:gap-14 md:grid-cols-[minmax(0,1fr)_minmax(280px,0.85fr)] md:items-center md:gap-8 lg:block lg:h-full lg:w-[min(calc(100%_-_64px),1158px)]">
         <div className="static z-[1] w-full max-w-[620px] md:max-w-none lg:absolute lg:top-[250px] lg:left-0 lg:w-[680px] lg:max-[1200px]:w-[53%]">
-          <h2 className="m-0 font-gerbil  font-normal tracking-[-0.042em] tracking-wide text-[30px] sm:text-[34px] md:text-[25px] lg:text-[34px]  leading-[43px] sm:leading-[50px] md:leading-[35px] lg:leading-[50px] ">
+          <h2 className="m-0 font-gerbil  font-normal tracking-[-0.042em] tracking-wide text-[28px] sm:text-[34px] md:text-[25px] lg:text-[34px]  leading-[38px] sm:leading-[50px] md:leading-[35px] lg:leading-[50px] ">
             <UnderlinedText className="after:left-1/2  after:-bottom-[0.10em]  after:h-[0.59em] after:w-[105%] after:-translate-x-1/2">
               Tomorrow
             </UnderlinedText>{" "}
