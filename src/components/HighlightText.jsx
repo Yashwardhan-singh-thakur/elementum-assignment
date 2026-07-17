@@ -6,7 +6,7 @@ const colorClasses = {
 function HighlightText({ children, color = "mint", className = "" }) {
   return (
     <span
-      className={`relative isolate  inline-block  whitespace-nowrap  before:absolute  before:-right-[0.25em] before:-z-10  before:rounded-full before:content-[''] ${colorClasses[color]} ${className}  `}
+      className={`relative isolate z-[-5]  inline-block  whitespace-nowrap  before:absolute  before:-right-[0.25em] before:-z-10  before:rounded-full before:content-[''] ${colorClasses[color]} ${className}  `}
     >
       {children}
     </span>

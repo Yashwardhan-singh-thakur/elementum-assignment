@@ -1,24 +1,24 @@
 function ServiceRow({ service }) {
   return (
     <a
-      className="group grid h-[132px] grid-cols-[300px_minmax(0,1fr)_62px] items-center border-b border-[#c7c7c7] max-[1200px]:grid-cols-[240px_minmax(0,1fr)_50px] max-[900px]:h-auto max-[900px]:min-h-[150px] max-[900px]:grid-cols-[170px_minmax(0,1fr)_40px] max-[900px]:gap-[18px] max-[900px]:py-[22px] max-[600px]:min-h-[155px] max-[600px]:grid-cols-[1fr_36px]"
+      className="group grid min-h-[142px] grid-cols-[1fr_36px] items-center gap-x-4 gap-y-3 border-b border-[#c7c7c7] py-5 sm:min-h-[132px] sm:grid-cols-[140px_minmax(0,1fr)_40px] sm:gap-4 md:grid-cols-[170px_minmax(0,1fr)_40px] md:gap-[18px] md:py-[22px] lg:h-[132px] lg:min-h-0 lg:grid-cols-[300px_minmax(0,1fr)_62px] lg:gap-0 lg:py-0 lg:max-[1200px]:grid-cols-[240px_minmax(0,1fr)_50px]"
       href="#contact"
     >
-      <p className="whitespace-pre-line text-[20px] leading-[1.4] max-[900px]:text-[13px] max-[600px]:col-start-1">
+      <p className="col-start-1 whitespace-pre-line text-[11px] leading-[1.4] sm:text-xs md:text-[13px] lg:text-[20px]">
         {service.category}
       </p>
-      <h3 className="relative z-2 font-gerbil text-[40px] leading-none font-normal tracking-[-0.035em] transition-transform duration-[180ms] group-hover:translate-x-2 group-focus-visible:translate-x-2 max-[1200px]:text-[42px] max-[900px]:text-[clamp(30px,5vw,42px)] max-[600px]:col-span-full max-[600px]:text-[31px] tracking-wide">
+      <h3 className="relative z-2 col-span-full row-start-2 font-gerbil text-[30px] leading-[1.05] font-normal tracking-[-0.035em] tracking-wide transition-transform duration-[180ms] group-hover:translate-x-2 group-focus-visible:translate-x-2 sm:col-auto sm:row-auto sm:text-[34px] md:text-[clamp(34px,4.4vw,42px)] lg:text-[40px] lg:leading-none lg:max-[1200px]:text-[42px]">
         {service.title}
         {service.decorated && (
           <img
-            className="absolute top-1/2 left-[55%] z-[-1] size-[104px] -translate-y-1/2 max-[600px]:size-[68px]"
+            className="absolute top-1/2 left-[55%] z-[-1] size-16 -translate-y-1/2 sm:size-[76px] md:size-[88px] lg:size-[104px]"
             src="/progres-img.png"
             alt=""
           />
         )}
       </h3>
       <span
-        className="relative block h-px w-[60px] justify-self-end bg-ink transition-transform duration-[180ms] after:absolute after:-top-1 after:right-0 after:size-2 after:rotate-45 after:border-t after:border-r after:border-ink after:content-[''] group-hover:translate-x-1.5 group-focus-visible:translate-x-1.5 max-[900px]:w-[38px] max-[600px]:col-start-2 max-[600px]:row-start-1"
+        className="relative col-start-2 row-start-1 block h-px w-9 justify-self-end bg-ink transition-transform duration-[180ms] after:absolute after:-top-1 after:right-0 after:size-2 after:rotate-45 after:border-t after:border-r after:border-ink after:content-[''] group-hover:translate-x-1.5 group-focus-visible:translate-x-1.5 sm:col-auto sm:row-auto sm:w-10 md:w-[38px] lg:w-[60px]"
         aria-hidden="true"
       />
     </a>

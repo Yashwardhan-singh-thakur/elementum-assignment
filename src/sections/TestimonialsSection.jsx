@@ -22,10 +22,10 @@ function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="relative h-[726px] px-20 overflow-hidden bg-white max-[900px]:h-auto max-[900px]:py-[100px] max-[900px]:pb-[110px] max-[600px]:py-20"
+      className="relative h-auto overflow-hidden bg-white px-0 py-16 sm:py-20 md:py-24 lg:h-[726px] lg:px-20 lg:py-0"
     >
-      <div className="relative mx-auto h-full w-[min(calc(100%_-_64px),1200px)] max-[900px]:flex max-[900px]:h-auto max-[900px]:w-[min(calc(100%_-_40px),700px)] max-[900px]:flex-col max-[900px]:items-center">
-        <h2 className="absolute top-[106px] left-1/2 z-[3] m-0 w-[690px] -translate-x-1/2 text-center font-gerbil text-[40px] leading-[50px] font-normal tracking-[-0.04em] max-[900px]:static max-[900px]:w-full max-[900px]:translate-x-0 max-[900px]:text-[clamp(40px,7vw,54px)] tracking-wide ">
+      <div className="relative mx-auto flex h-auto w-[min(calc(100%_-_40px),700px)] flex-col items-center sm:w-[min(calc(100%_-_64px),700px)] lg:block lg:h-full lg:w-[min(calc(100%_-_64px),1200px)]">
+        <h2 className="static z-[3] m-0 w-full text-center font-gerbil text-[38px] leading-[1.08] font-normal tracking-[-0.04em] tracking-wide sm:text-[44px] md:text-[50px] lg:absolute lg:top-[106px] lg:left-1/2 lg:w-[690px] lg:-translate-x-1/2 lg:text-[40px] lg:leading-[50px]">
           <HighlightText
             color="mint"
             className="before:-left-[0.35em] before:h-[1.30em] before:bottom-[0.05em] "
@@ -35,19 +35,19 @@ function TestimonialsSection() {
           our customer
           <br />
           says{" "}
-          <UnderlinedText className="after:w-[290px]  after:-translate-x-1/2 after:left-1/2 after:-bottom-[0.18em] after:h-[0.59em]">
+          <UnderlinedText className="after:left-1/2 after:-bottom-[0.18em] after:h-[0.59em] after:w-[105%] after:-translate-x-1/2 lg:after:w-[290px]">
             About Us
           </UnderlinedText>
         </h2>
 
-        <article className=" absolute top-[245px] left-1/2 z-[2] flex min-h-[220px] w-[630px] -translate-x-1/2 items-center rounded-[42px] bg-quote px-[70px] py-[42px] text-center max-[900px]:static max-[900px]:mt-[55px] max-[900px]:w-[min(100%,660px)] max-[900px]:translate-x-0 max-[600px]:min-h-0 max-[600px]:rounded-[30px] max-[600px]:px-[30px] max-[600px]:py-12">
+        <article className="relative z-[2] mt-10 flex min-h-0 w-full max-w-[660px] items-center rounded-[30px] bg-quote px-[30px] py-10 text-center sm:mt-12 sm:rounded-[36px] sm:px-12 sm:py-11 md:px-14 lg:absolute lg:top-[245px] lg:left-1/2 lg:mt-0 lg:min-h-[220px] lg:w-[630px] lg:-translate-x-1/2 lg:rounded-[42px] lg:px-[70px] lg:py-[42px]">
           <span
-            className="absolute top-[15px] left-[45px] font-serif text-[116px] leading-none font-extrabold text-[#c6d1c9]"
+            className="absolute top-2 left-6 font-serif text-[80px] leading-none font-extrabold text-[#c6d1c9] sm:top-3 sm:left-10 sm:text-[100px] lg:top-[15px] lg:left-[45px] lg:text-[116px]"
             aria-hidden="true"
           >
             “
           </span>
-          <p className="relative z-[2] text-xl leading-[1.46] max-[600px]:text-sm indent-8">
+          <p className="relative z-[2] indent-8 text-sm leading-[1.5] sm:text-base md:text-lg lg:text-xl lg:leading-[1.46]">
             Elementum delivered the site within the timeline as they requested.
             In the end, the client found a 50% increase in traffic with in days
             since its launch. They also had an impressive ability to use
@@ -55,7 +55,7 @@ function TestimonialsSection() {
             proved to be easy to use and reliable.
           </p>
           <span
-            className="absolute right-[125px] bottom-[-38px] font-serif text-[116px] leading-none font-extrabold text-[#c6d1c9]"
+            className="absolute right-6 -bottom-7 font-serif text-[80px] leading-none font-extrabold text-[#c6d1c9] sm:right-16 sm:-bottom-8 sm:text-[100px] lg:right-[125px] lg:bottom-[-38px] lg:text-[116px]"
             aria-hidden="true"
           >
             ”
@@ -63,12 +63,12 @@ function TestimonialsSection() {
         </article>
 
         <div
-          className="absolute inset-0 z-[1] max-[900px]:relative max-[900px]:mt-[50px] max-[900px]:grid max-[900px]:w-[min(100%,620px)] max-[900px]:grid-cols-4 max-[900px]:gap-[22px] max-[600px]:gap-3"
+          className="relative z-[1] mt-10 grid w-full max-w-[620px] grid-cols-4 gap-3 sm:mt-12 sm:gap-5 md:gap-[22px] lg:absolute lg:inset-0 lg:mt-0 lg:block lg:max-w-none"
           aria-label="Elementum customers"
         >
           {customers.map((customer) => (
             <figure
-              className={`absolute m-0 overflow-hidden rounded-full bg-[#ededed] max-[900px]:static max-[900px]:size-auto max-[900px]:aspect-square ${customerPositionClasses[customer.id]}`}
+              className={`absolute m-0 overflow-hidden rounded-full bg-[#ededed] max-lg:static max-lg:aspect-square max-lg:size-auto ${customerPositionClasses[customer.id]}`}
               key={customer.id}
             >
               <img

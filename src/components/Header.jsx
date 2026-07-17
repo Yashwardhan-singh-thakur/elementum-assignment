@@ -24,10 +24,10 @@ function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 w-[100%] z-[100] h-[72px] bg-white  ">
-      <div className="mx-auto flex h-[72px] w-[min(calc(100%_-_64px),1200px)] items-center justify-between max-[900px]:w-[min(calc(100%_-_40px),700px)]">
+    <header className="fixed top-0 z-[100] h-[72px] w-full bg-white">
+      <div className="mx-auto flex h-[72px] w-[min(calc(100%_-_40px),900px)] items-center justify-between sm:w-[min(calc(100%_-_64px),900px)] lg:w-[min(calc(100%_-_64px),1200px)]">
         <a
-          className="font-gerbil text-[20px] leading-none tracking-[-0.035em] max-[600px]:text-xl tracking-wide"
+          className="font-gerbil text-xl leading-none tracking-[-0.035em] tracking-wide lg:text-[20px]"
           href="#home"
           onClick={() => setIsMenuOpen(false)}
         >
@@ -35,7 +35,7 @@ function Header() {
         </a>
 
         <nav
-          className="absolute left-1/2 flex -translate-x-1/2 gap-[47px] text-[13px] max-[900px]:hidden"
+          className="absolute left-1/2 hidden -translate-x-1/2 gap-[47px] text-[13px] lg:flex"
           aria-label="Primary navigation"
         >
           {navigationItems.map((item) => (
@@ -50,7 +50,7 @@ function Header() {
         </nav>
 
         <button
-          className="flex size-9 cursor-pointer flex-col items-end justify-center gap-[7px] border-0 bg-transparent p-0"
+          className="flex size-11 cursor-pointer flex-col items-end justify-center gap-[7px] border-0 bg-transparent p-0 lg:size-9"
           type="button"
           aria-label="Toggle navigation menu"
           aria-expanded={isMenuOpen}
@@ -74,7 +74,7 @@ function Header() {
 
       <nav
         id="mobile-navigation"
-        className={`absolute top-16 right-6 grid w-[min(320px,calc(100%_-_48px))] border border-[#dedede] bg-white px-5 py-2.5 shadow-[0_18px_45px_rgb(0_0_0_/_10%)] transition-[opacity,transform] duration-[180ms] ${
+        className={`absolute top-[72px] right-5 grid w-[min(320px,calc(100%_-_40px))] border border-[#dedede] bg-white px-5 py-2.5 shadow-[0_18px_45px_rgb(0_0_0_/_10%)] transition-[opacity,transform] duration-[180ms] sm:right-8 lg:top-16 lg:right-6 lg:w-[min(320px,calc(100%_-_48px))] ${
           isMenuOpen
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-2.5 opacity-0"

@@ -11,7 +11,7 @@ function App() {
     <>
       <Header />
 
-      <main className="pt-[56px]">
+      <main className="pt-[72px] lg:pt-[56px]">
         <HeroSection />
         <PinkLine />
         <ServicesSection />

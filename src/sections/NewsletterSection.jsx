@@ -22,42 +22,42 @@ function NewsletterSection() {
   return (
     <section
       id="newsletter"
-      className="relative h-[468px] overflow-hidden bg-mint max-[900px]:h-auto max-[900px]:min-h-[460px]"
+      className="relative h-auto min-h-[440px] overflow-hidden bg-mint sm:min-h-[460px] lg:h-[468px] lg:min-h-0"
     >
       <div
-        className="pointer-events-none absolute -top-2 right-0 left-0 z-[1] h-[120px] max-[600px]:left-[44%] max-[600px]:w-[130px]"
+        className="pointer-events-none absolute top-0 right-0 left-0 z-[1] h-[110px] lg:-top-2 lg:h-[120px]"
         aria-hidden="true"
       >
         <img
-          className="absolute left-[calc(50%_-_225px)] w-[156px]"
+          className="absolute left-[calc(50%_-_105px)] w-[110px] sm:left-[calc(50%_-_160px)] sm:w-[140px] lg:left-[calc(50%_-_225px)] lg:w-[156px]"
           src="/lines/pink-arrow-line.png"
           alt=""
         />
         <img
-          className="absolute left-[calc(50%_-_150px)] w-[156px]"
+          className="absolute left-[calc(50%_-_52px)] w-[110px] sm:left-[calc(50%_-_90px)] sm:w-[140px] lg:left-[calc(50%_-_150px)] lg:w-[156px]"
           src="/lines/pink-arrow-line.png"
           alt=""
         />
       </div>
       <img
-        className="absolute top-[180px] right-[6.5%] w-[124px] max-[900px]:-right-[30px] max-[900px]:w-[100px]  rotate-180 "
+        className="absolute top-[170px] right-4 w-20 rotate-180 sm:top-[180px] sm:right-6 sm:w-[100px] lg:right-[6.5%] lg:w-[124px]"
         src="/styled-container/purple-half-circle.png"
         alt=""
         aria-hidden="true"
       />
 
-      <div className="relative z-[2] pt-[110px] text-center max-[900px]:px-5 max-[900px]:pt-[110px] max-[900px]:pb-20 max-[600px]:pt-[105px]">
-        <h2 className="font-gerbil text-[70px] leading-[90px] font-normal tracking-[-0.045em] max-[900px]:text-[clamp(60px,11vw,86px)] tracking-wide ">
+      <div className="relative z-[2] px-5 pt-24 pb-16 text-center sm:pt-26 sm:pb-20 lg:px-0 lg:pt-[110px] lg:pb-0">
+        <h2 className="font-gerbil text-[clamp(40px,11vw,44px)] leading-[1.02] font-normal tracking-[-0.045em] tracking-wide sm:text-[56px] md:text-[64px] lg:text-[70px] lg:leading-[90px]">
           Subscribe to
           <br />
           our newsletter
         </h2>
-        <p className="mt-[5px] text-[16px] max-[600px]:text-[11px]">
+        <p className="mt-3 text-[11px] sm:text-[13px] lg:mt-[5px] lg:text-[16px]">
           To make your stay special and even more memorable
         </p>
 
         <form
-          className="mt-[27px] flex min-h-[52px] items-center justify-center gap-2.5 max-[600px]:flex-col"
+          className="mt-6 flex min-h-[52px] flex-col items-center justify-center gap-2.5 sm:flex-row lg:mt-[27px]"
           onSubmit={handleSubmit}
         >
           <label className="sr-only" htmlFor="newsletter-email">
@@ -74,7 +74,7 @@ function NewsletterSection() {
             tabIndex={isOpen ? 0 : -1}
             className={`h-[52px] rounded-full border border-ink bg-transparent text-sm opacity-0 outline-none transition-[width,padding,opacity] duration-[220ms] focus-visible:shadow-[0_0_0_3px_rgb(8_8_8_/_15%)] ${
               isOpen
-                ? "w-[250px] px-[21px] opacity-100 max-[600px]:w-[min(280px,calc(100vw_-_48px))]"
+                ? "w-[min(280px,calc(100vw_-_48px))] px-[21px] opacity-100 sm:w-[250px]"
                 : "w-0 p-0"
             }`}
           />

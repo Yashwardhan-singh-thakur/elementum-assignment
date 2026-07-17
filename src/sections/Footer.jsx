@@ -25,10 +25,8 @@ const animatedLinkClasses =
 function FooterList({ title, links }) {
   return (
     <div>
-      <h3 className="font-gerbil text-lg font-normal max-[600px]:text-base">
-        {title}
-      </h3>
-      <nav className="mt-8 flex flex-col gap-[25px] text-[13px] leading-[1.45] max-[600px]:mt-6 max-[600px]:gap-5 max-[600px]:text-xs">
+      <h3 className="font-gerbil text-lg font-normal sm:text-lg">{title}</h3>
+      <nav className="mt-6 flex flex-col gap-5 text-xs leading-[1.45] sm:mt-8 sm:gap-[25px] sm:text-[13px]">
         {links.map((link) => (
           <a
             className={animatedLinkClasses}
@@ -49,19 +47,19 @@ function Footer() {
   return (
     <footer
       id="contact"
-      className="h-[502px] bg-mint max-[900px]:h-auto max-[900px]:min-h-[500px] max-[900px]:pb-[38px]"
+      className="h-auto min-h-[600px] bg-mint pb-8 sm:min-h-[520px] md:min-h-[500px] lg:h-[502px] lg:min-h-0 lg:pb-0"
     >
-      <div className="relative mx-auto h-full w-[min(calc(100%_-_64px),1200px)] border-t border-[#4a524d] max-[900px]:w-[min(calc(100%_-_40px),700px)] max-[900px]:pb-[90px]">
-        <div className="grid grid-cols-4 gap-[72px] pt-[72px] max-[900px]:grid-cols-2 max-[600px]:gap-x-[30px] max-[600px]:gap-y-12">
+      <div className="relative mx-auto min-h-[600px] w-[min(calc(100%_-_40px),900px)] border-t border-[#4a524d] pb-20 sm:min-h-[520px] sm:w-[min(calc(100%_-_64px),900px)] md:min-h-[500px] lg:h-full lg:min-h-0 lg:w-[min(calc(100%_-_64px),1200px)] lg:pb-0">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-12 pt-12 sm:gap-x-12 md:grid-cols-4 md:gap-x-8 md:gap-y-0 md:pt-16 lg:gap-[72px] lg:pt-[72px]">
           <FooterList title="Company" links={companyLinks} />
           <FooterList title="Terms & Policies" links={policyLinks} />
           <FooterList title="Follow Us" links={socialLinks} />
 
           <div>
-            <h3 className="font-gerbil text-lg font-normal max-[600px]:text-base">
+            <h3 className="font-gerbil text-base font-normal sm:text-lg">
               Terms &amp; Policies
             </h3>
-            <address className="mt-8 flex flex-col gap-[25px] text-[13px] leading-[1.45] not-italic max-[600px]:mt-6 max-[600px]:gap-5 max-[600px]:text-xs">
+            <address className="mt-6 flex flex-col gap-5 text-xs leading-[1.45] not-italic sm:mt-8 sm:gap-[25px] sm:text-[13px]">
               <p>
                 1498w Fulton ste, STE
                 <br />
@@ -80,7 +78,7 @@ function Footer() {
           </div>
         </div>
 
-        <p className="absolute right-0 bottom-[31px] left-0 text-center text-[11px]">
+        <p className="absolute right-0 bottom-5 left-0 text-center text-[10px] sm:bottom-8 sm:text-[11px] lg:bottom-[31px]">
           ©2023 Elementum. All rights reserved
         </p>
       </div>

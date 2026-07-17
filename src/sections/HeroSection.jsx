@@ -23,10 +23,10 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative  h-[922px] overflow-hidden bg-white max-[900px]:h-auto max-[900px]:min-h-[930px] max-[900px]:pb-20 max-[600px]:min-h-0"
+      className="relative h-auto overflow-hidden bg-white pb-16 sm:pb-20 md:pb-24 lg:h-[922px] lg:pb-0"
     >
       <div
-        className="pointer-events-none absolute top-[366px] -left-2.5 z-[2] h-[290px] w-[126px] max-[900px]:hidden"
+        className="pointer-events-none absolute top-[366px] -left-2.5 z-[2] hidden h-[290px] w-[126px] lg:block"
         aria-hidden="true"
       >
         <img
@@ -42,28 +42,27 @@ export default function HeroSection() {
       </div>
 
       <img
-        className="pointer-events-none absolute top-[244px] right-[7.1%] z-[2] w-[84px] max-[900px]:hidden"
+        className="pointer-events-none absolute top-[244px] right-[7.1%] z-[2] hidden w-[84px] lg:block"
         src="/styled-container/purple-half-circle.png"
         alt=""
         aria-hidden="true"
       />
 
-      <div className="relative z-[3] mx-auto w-[min(calc(100%_-_64px),1120px)] pt-[119px]  text-center max-[900px]:w-[min(calc(100%_-_40px),760px)] max-[900px]:pt-[70px] max-[600px]:pt-12">
-        <h1 className="m-0 font-gerbil text-[70px] leading-[90px]  font-normal  max-[1200px]:text-[clamp(58px,5.8vw,70px)] max-[900px]:text-[clamp(46px,7vw,58px)] max-[600px]:text-[clamp(38px,10vw,48px)]    tracking-wide ">
+      <div className="relative z-[3] mx-auto w-[min(calc(100%_-_40px),760px)] pt-10 text-center sm:w-[min(calc(100%_-_64px),760px)] sm:pt-14 md:w-[min(calc(100%_-_64px),900px)] md:pt-16 lg:w-[min(calc(100%_-_64px),1120px)] lg:pt-[119px]">
+        <h1 className="m-0 font-gerbil  text-[clamp(34px,9.2vw,36px)] leading-[1.12] font-normal tracking-wide sm:text-[48px] sm:leading-[1.1] md:text-[clamp(52px,6vw,58px)] lg:text-[70px] lg:leading-[90px] lg:max-[1200px]:text-[clamp(58px,5.8vw,70px)]">
           The{" "}
-          <UnderlinedText className="after:w-[440px]  after:-translate-x-1/2 after:left-1/2 after:-bottom-[0.14em] after:h-[0.59em]">
+          <UnderlinedText className="after:left-1/2 after:-bottom-[0.14em] after:h-[0.59em] after:w-[105%] after:-translate-x-1/2 lg:after:w-[440px]">
             thinkers
           </UnderlinedText>{" "}
-          and
-          <br />
+          and <br className="hidden lg:block" />
           doers were{" "}
           <HighlightText
             color="pink"
-            className="before:-left-[-1.75em] before:h-[1.3em]  before:bottom-[0.05em]"
+            className="before:bottom-[-0.08em] before:-left-[0.25em] before:h-[1.35em] lg:before:-left-[-1.75em]"
           >
             changing
-          </HighlightText>
-          <br />
+          </HighlightText>{" "}
+          <br className="hidden lg:block" />
           the{" "}
           <HighlightText
             color="mint"
@@ -74,16 +73,16 @@ export default function HeroSection() {
           Quo with
         </h1>
 
-        <p className="mt-5 text-[17px] leading-[1.55] tracking-[-0.01em] max-[900px]:mx-auto max-[900px]:max-w-[570px] max-[600px]:mt-7 max-[600px]:text-xs">
+        <p className="mx-auto mt-6 max-w-[620px] text-[13px] leading-[1.6] tracking-[-0.01em] sm:text-[15px] md:text-base lg:mt-5 lg:max-w-none lg:text-[17px] lg:leading-[1.55]">
           We are a team of strategists, designers communicators, researchers.
           Together,
-          <br className="max-[600px]:hidden" /> we believe that progress only
+          <br className="hidden md:block" /> we believe that progress only
           happens when you refuse to play things safe.
         </p>
       </div>
 
       <div
-        className="absolute top-[520px] left-1/2 h-[365px] w-[min(100%,1440px)] -translate-x-1/2 max-[900px]:relative max-[900px]:top-auto max-[900px]:left-auto max-[900px]:mx-auto max-[900px]:mt-[70px] max-[900px]:grid max-[900px]:h-auto max-[900px]:w-[min(calc(100%_-_40px),650px)] max-[900px]:translate-x-0 max-[900px]:grid-cols-4 max-[900px]:gap-[26px] max-[600px]:mt-12 max-[600px]:gap-3"
+        className="relative mx-auto mt-10 grid w-[min(calc(100%_-_40px),650px)] grid-cols-4 gap-3 sm:mt-14 sm:w-[min(calc(100%_-_64px),650px)] sm:gap-5 md:mt-16 md:gap-[26px] lg:absolute lg:top-[520px] lg:left-1/2 lg:mt-0 lg:block lg:h-[365px] lg:w-[min(100%,1440px)] lg:-translate-x-1/2"
         aria-label="Meet the Elementum team"
       >
         {teamMembers.map((member) => (

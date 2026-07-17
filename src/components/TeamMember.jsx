@@ -1,7 +1,7 @@
 function TeamMember({ member, memberPositionClasses }) {
   return (
     <figure
-      className={`absolute m-0 overflow-hidden rounded-full bg-[#ededed] max-[900px]:static max-[900px]:size-auto max-[900px]:aspect-square ${memberPositionClasses[member.id]}`}
+      className={`absolute m-0 overflow-hidden rounded-full bg-[#ededed] max-lg:static max-lg:aspect-square max-lg:size-auto ${memberPositionClasses[member.id]}`}
     >
       <img
         className="size-full object-cover"
