@@ -38,8 +38,8 @@ function ServicesSection() {
         <h2
           className="m-0 w-full origin-top-left font-gerbil text-[48px]
         leading-[1.02] font-normal tracking-[-0.045em] tracking-wide
-        sm:text-[56px] lg:w-[850px] lg:translate-y-[22px]
-        lg:scale-y-110c  md:text-[40px]  lg:text-[60px]  md:leading-[48px] lg:leading-[70px]"
+        lg:w-[850px] lg:translate-y-[22px] 
+        sm:text-[40px] lg:text-[60px] sm:leading-[48px] lg:leading-[70px]"
         >
           What we{" "}
           <HighlightText
@@ -48,8 +48,8 @@ function ServicesSection() {
           >
             can
           </HighlightText>{" "}
-          <br className="hidden md:block" />
-          <UnderlinedText className="z-[-1] after:left-1/2 after:-bottom-[-0.02em]   lg:after:-bottom-[-0.05em] after:h-[0.3em] after:w-[105%] after:-translate-x-1/2 md:after:w-[150px]   lg:after:w-[220px]">
+          <br className="hidden sm:block" />
+          <UnderlinedText className="z-[-1] after:left-1/2 after:-bottom-[-0.02em]   lg:after:-bottom-[-0.05em] after:h-[0.3em] after:w-[105%] after:-translate-x-1/2 sm:after:w-[150px]   lg:after:w-[220px]">
             offer
           </UnderlinedText>{" "}
           you!

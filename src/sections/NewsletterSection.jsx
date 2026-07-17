@@ -22,7 +22,7 @@ function NewsletterSection() {
   return (
     <section
       id="newsletter"
-      className="relative h-auto min-h-[440px] overflow-hidden bg-mint sm:min-h-[460px] md:h-[445]  lg:h-[468px] lg:min-h-0"
+      className="relative h-auto min-h-[440px] overflow-hidden bg-mint sm:min-h-[460px] md:h-[445px] lg:h-[468px] lg:min-h-0"
     >
       <div
         className="pointer-events-none absolute top-0 right-0 left-0 z-[1] h-[110px] lg:-top-2 lg:h-[120px]"
@@ -40,14 +40,14 @@ function NewsletterSection() {
         />
       </div>
       <img
-        className="absolute top-[170px] right-4 w-20 rotate-180 sm:top-[180px] sm:right-6 sm:w-[100px] lg:right-[6.5%] lg:w-[124px]"
+        className="absolute top-[170px] -right-16 w-20 rotate-180 sm:top-[180px] sm:-right-12 sm:w-[100px] md:right-6 lg:right-[6.5%] lg:w-[124px]"
         src="/styled-container/purple-half-circle.png"
         alt=""
         aria-hidden="true"
       />
 
       <div className="relative z-[2] px-5 pt-24 pb-16 text-center sm:pt-26 sm:pb-20 lg:px-0 lg:pt-[110px] lg:pb-0">
-        <h2 className="font-gerbil text-[clamp(40px,11vw,44px)] leading-[1.02] font-normal tracking-[-0.045em] tracking-wide sm:text-[56px] md:text-[54px] lg:text-[65px] xl:text-[70px] lg:leading-[90px]">
+        <h2 className="font-gerbil text-[clamp(40px,11vw,44px)] leading-[1.02] font-normal tracking-[-0.045em] tracking-wide sm:text-[45px] md:text-[54px] lg:text-[65px] xl:text-[70px] lg:leading-[90px]">
           Subscribe to
           <br />
           our newsletter
